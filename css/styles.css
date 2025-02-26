@@ -1,0 +1,243 @@
+/* Base styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+/* Auth container */
+.auth-container {
+    display: flex;
+    max-width: 900px;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* Blue card */
+.blue-card {
+    background-color: #6B8AFE;
+    color: white;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+    transition: all 0.3s ease;
+}
+
+.blue-card:hover {
+    transform: translateY(-5px);
+}
+
+.blue-card h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.blue-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+.toggle-btn {
+    background-color: white;
+    color: #6B8AFE;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+.toggle-btn:active {
+    transform: translateY(0);
+}
+
+/* White card */
+.white-card {
+    padding: 3rem 2rem;
+    width: 60%;
+}
+
+/* Form container */
+.form-container {
+    transition: all 0.5s ease;
+}
+
+.form-container h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.form-container .subtitle {
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Form styles */
+form {
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    padding-right: 2.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #6B8AFE;
+    box-shadow: 0 0 0 3px rgba(107, 138, 254, 0.2);
+}
+
+.input-icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #9ca3af;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-password a {
+    color: #6B8AFE;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: #5A79ED;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #6B8AFE;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #5A79ED;
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Social login */
+.social-login {
+    text-align: center;
+}
+
+.social-login p {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    border: 1px solid #d1d5db;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+    border-color: #6B8AFE;
+}
+
+.social-btn svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #6b7280;
+}
+
+/* Utility classes */
+.hidden {
+    display: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column;
+        max-width: 400px;
+    }
+    
+    .blue-card, .white-card {
+        width: 100%;
+    }
+    
+    .blue-card {
+        padding: 2rem 1rem;
+    }
+}
